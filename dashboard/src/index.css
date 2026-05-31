@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-slate-950 text-slate-100; }
+.card { @apply rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-xl; }
+.table-th { @apply px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-slate-400; }
+.table-td { @apply border-t border-slate-800 px-3 py-2 text-sm; }
+.btn { @apply rounded-xl bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-400 disabled:bg-slate-700; }
+.btn-danger { @apply rounded-xl bg-red-600 px-4 py-2 font-semibold text-white hover:bg-red-500; }

@@ -25,6 +25,8 @@ class OrderEngine:
             side=side,
             quantity=order.quantity,
             price=order.estimated_price,
+            filled_quantity=result.filled_quantity,
+            filled_price=result.average_price,
             order_type=order_type,
             status=OrderStatus(result.status) if result.status in {status.value for status in OrderStatus} else OrderStatus.NEW,
             broker_order_id=result.broker_order_id,

@@ -104,3 +104,21 @@ def test_api_health() -> None:
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+
+
+def test_dashboard_routes_registered() -> None:
+    route_paths = {route.path for route in app.routes}
+    required = {
+        "/dashboard/overview",
+        "/dashboard/portfolio",
+        "/dashboard/orders",
+        "/dashboard/trades",
+        "/dashboard/factors",
+        "/dashboard/risk",
+        "/dashboard/backtest",
+        "/dashboard/walkforward",
+        "/dashboard/rebalance",
+        "/dashboard/emergency-stop",
+        "/dashboard/admin/settings",
+    }
+    assert required.issubset(route_paths)
