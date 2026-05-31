@@ -264,3 +264,9 @@ npm run dev
 ```
 
 Docker Compose 실행 시 `api`는 `8000`, `dashboard`는 `5173` 포트로 기동된다. Dashboard는 `VITE_API_BASE_URL=http://localhost:8000`을 사용해 FastAPI에 연결한다.
+
+## 28. 유지보수 문서와 빌드 가이드
+
+유지보수자는 전략/데이터/리스크/주문 로직을 변경하기 전에 `docs/business_logic.md`를 먼저 확인해야 한다. 해당 문서는 유니버스 선정, 팩터 계산, 전략 신호, 리밸런싱, 리스크 관리, 백테스트, 주문, Emergency Stop의 불변 규칙과 회귀 테스트 기준을 정의한다.
+
+전체 저장소 구조, Docker Compose 실행, Backend/Frontend 로컬 개발, 테스트, 초기 데이터 적재, 운영 배포 체크리스트는 `docs/build_guide.md`에 정리되어 있다. 신규 개발자는 README를 시작점으로 삼고, 상세 설계는 `docs/architecture.md`, 유지보수 규칙은 `docs/business_logic.md`, 실행 절차는 `docs/build_guide.md`를 순서대로 확인한다.
