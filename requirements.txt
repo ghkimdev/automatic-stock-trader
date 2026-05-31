@@ -1,0 +1,17 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pandas==2.2.3
+numpy==2.2.1
+SQLAlchemy==2.0.36
+psycopg[binary]==3.2.3
+apscheduler==3.11.0
+loguru==0.7.3
+pydantic==2.10.4
+pydantic-settings==2.7.1
+httpx==0.28.1
+python-dotenv==1.0.1
+vectorbt==0.26.2
+pykrx==1.0.48
+FinanceDataReader==0.9.94
+pytest==8.3.4
+pytest-asyncio==0.25.0
